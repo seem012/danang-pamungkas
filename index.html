@@ -204,22 +204,20 @@
 
     <script>
       function sendData() {
-        // Mengambil nilai dari input
-        var namaLengkap = document.getElementById("namaLengkap").value;
-        var alamatLengkap = document.getElementById("alamatLengkap").value;
-        var noWa = document.getElementById("noWa").value;
-        var oneTheSpot = document.getElementById("oneTheSpot").value;
-        var keluhan = document.getElementById("keluhan").value;
-
-        // Menggabungkan nilai-nilai input
-        var message = "Nama Lengkap: " + namaLengkap + "%0AAlamat Lengkap: " + alamatLengkap + "%0ANo WA/Telfon: " + noWa + "%0AOne The Spot/Teken: " + oneTheSpot + "%0AKeluhan: " + keluhan;
-
-        // Membuat URL untuk membuka WhatsApp dengan pesan yang disiapkan
-        var waUrl = "https://wa.me/message/WBFFWX7CIED7D1" + noWa + "&text=" + encodeURIComponent(message);
-
-        // Membuka WhatsApp
-        window.open(waUrl, "_blank");
+          var namaLengkap = document.getElementById('namaLengkap').value;
+          var alamatLengkap = document.getElementById('alamatLengkap').value;
+          var noWa = document.getElementById('noWa').value;
+          var oneTheSpot = document.getElementById('oneTheSpot').value;
+          var keluhan = document.getElementById('keluhan').value;
+  
+          var message = 'Nama Lengkap: ' + namaLengkap + '%0AAlamat Lengkap: ' + alamatLengkap + '%0ANo WA/Telfon: ' + noWa + '%0AOne The Spot/Teken: ' + oneTheSpot + '%0AKeluhan: ' + keluhan;
+  
+          // Menggunakan format URL untuk membuka WhatsApp
+          var waUrl = 'https://wa.me/message/WBFFWX7CIED7D1' + noWa + '?text=' + encodeURIComponent(message);
+  
+          // Membuka WhatsApp
+          window.open(waUrl, '_blank');
       }
-    </script>
+  </script>
   </body>
 </html>
